@@ -23,6 +23,8 @@
     <link rel="icon" href="../images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+    <!-- bootstrap icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/../css/font-awesome.css">
     <!-- owl stylesheets -->
@@ -36,11 +38,16 @@
 </head>
 <!-- body -->
 
-<body class="main-layout ">
+<body class="main-layout">
+
+
+
+
     <!-- loader  -->
     <div class="loader_bg">
         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
     </div>
+
     <!-- end loader -->
     <!-- header -->
     <header>
@@ -57,39 +64,60 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-9">
-                        <div class="menu-area">
-                            <div class="limit-box">
-                                <nav class="main-menu">
-                                    <ul class="menu-area-main d-flex flex-row">
-                                        <li class="active"> <a href="index.html">Home</a> </li>
-                                        <li> <a href="about.html">About</a> </li>
-                                        <li><a href="brand.html">Brand</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li class="last d-flex align-items-center">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../en/'">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../fr/'">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../ar/'">
+                    <div class="col-9 d-flex justify-content-end align-items-center">
+                        <div class="menu-areaw">
+                            <section class="limit-boxw">
+                                <div class="main-menus navbar--">
+                                    <ul class="menu-area-mainw d-flex flex-row">
+                                        <li class="active"> <a class="hover-underline-light--" href="index.html">Home</a> </li>
+                                        <li> <a class="hover-underline-light--" href="about.html">About</a> </li>
+                                        <li><a class="hover-underline-light--" href="brand.html">Brand</a></li>
+                                        <li><a class="hover-underline-light--" href="contact.html">Contact&nbsp;Us</a></li>
+                                        <li class="d-flex align-items-center">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../en/'">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../fr/'">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../ar/'">
                                         </li>                                                                                
                                     </ul>
-                                </nav>
-                            </div>
+                                </div>
+                            </section>
                         </div>
-                    </div>
-                    <div class="col-md-7 offset-md-7">
-                        <div class="location_icon_bottum d-flex flex-nowarap">
-                            <ul>
-                                <li><img src="../icon/call.png" />(+212) 665-828-974</li>
-                                <li><img src="../icon/email.png" />Khalil4Store@gmail.com</li>
-                                <li><img src="../icon/loc.png" />Temara</li>
-                            </ul>
+                        <div class="menu-toggler--">
+                            <img class="navbar-sm-- cursor-pointer--" src="../images/menu.png" alt="Menu" style="width: 40px; height: auto;" />
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- end header inner -->
     </header>
+
+
+    <div class="navbar-sm-- bg-light navbar-sm--css-- d-flex flex-column align-items-center py-4 shadow" style="position: absolute; top: 0px; width: 100vw; height: 100vh; overflow: hidden;">
+        <div class="text-right w-75 mb-5 mt-4 menu-toggler--">
+            <img class="navbar-sm-- cursor-pointer--" src="../images/close-btn.png" alt="Menu" style="width: 40px; height: auto;" />
+        </div>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-house mr-3"></i> Home
+        </p>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-info-circle mr-3"></i> About
+        </p>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-tag mr-3"></i> Brand
+        </p>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-envelope mr-3"></i> Contact Us
+        </p>
+        <div class="mt-auto ml-auto p-2 pr-4 mb-5">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../en/'">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../fr/'">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../ar/'">
+        </div>
+    </div>
+
+
     <!-- end header -->
     <section class="slider_section">
         <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
@@ -184,17 +212,92 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Our Brand</h2>
+                        <h2>Our Products</h2>
+                        <h3 class="p-2">new experience is waiting for you with our high tech</h3>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="brand-bg">
-            <div class="container">
-                    <div class="row"></div>
-                    <div class="col-md-12">
-                        <button class="read-more" id="load-phones--">See More</button>
+    </div>
+
+    <div class="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_img">
+                        <figure><img src="../images/products/airpods_type.png" alt="AirPods" /></figure>
                     </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_box">
+                        <span>AirPods</span>
+                        <p>Discover high-quality AirPods that deliver exceptional sound and convenience.</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_box_">
+                        <span>Smart Watches</span>
+                        <p>We offer a wide selection of premium smart watches to suit your lifestyle.</p>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_img my-5 py-5">
+                        <figure><img src="../images/products/smart_watch.png" alt="Smart Watch" /></figure>
+                    </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_img">
+                        <figure><img src="../images/products/glass_type.png" alt="Charger" /></figure>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_box">
+                        <span>Screen protectors</span>
+                        <p>Explore our range of reliable screen protectors for all models.</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_box_">
+                        <span>Phone Cases</span>
+                        <p>We offer a wide range of protective and stylish phone cases for all devices.</p>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_img my-5 py-5">
+                        <figure><img src="../images/products/case_type.png" alt="Phone Case" /></figure>
+                    </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_img">
+                        <figure><img src="../images/products/charger_type.png" alt="Charger" /></figure>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_box">
+                        <span>Chargers</span>
+                        <p>Explore our range of reliable and fast phone chargers for all models.</p>
+                    </div>
+                </div>
+                                
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_box_">
+                        <span>Cables</span>
+                        <p>We provide high-quality cables designed for maximum durability and performance.</p>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_img my-5 py-5">
+                        <figure><img src="../images/products/type_c_type.png" alt="USB-C Cable" /></figure>
+                    </div>
+                </div>
+                
+
+
             </div>
         </div>
     </div>
@@ -367,9 +470,9 @@
                         <div class="footer-box">
                             <div class="headinga">
                                 <h3>Address</h3>
-                                <span>Témara</span>
-                                <p>(+212) 665-828-974 
-                                    <br>Khalil4Store@gmail.com</p>
+                               <span><i class="hover-underline-light-- pb-1" >Témara</i></span>
+                                <p><i class="hover-underline-light-- pb-1 mt-3" >(+212) 665-828-974</i></p>
+                                <p><i class="hover-underline-light-- pb-1 mt-3">Khalil4Store@gmail.com</i></p>
                             </div>
                             <ul class="location_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -379,18 +482,55 @@
                             </ul>
                             <div class="menu-bottom">
                                 <ul class="link">
-                                    <li> <a href="#">Home</a></li>
-                                    <li> <a href="#">About</a></li>
-                                    
-                                    <li> <a href="#">Brand </a></li>
-                                    <li> <a href="#">Specials  </a></li>
-                                    <li> <a href="#"> Contact us</a></li>
+                                    <li> <a href="./">Home</a></li>
+                                    <li> <a href="./about.html">About</a></li>
+                                    <li> <a href="./brand.html">Brand</a></li>
+                                    <li> <a href="./contact.html">Contact&nbsp;Us</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-2 offset-md-10" style="height: 50px;">
+                <div class="d-flex justify-content-end align-items-center">
+                    <ul class="d-flex flex-row flex-nowrap p-3">
+                        <!-- Phone Call -->
+                        <li class="m-2">
+                            <a href="tel:+212665828974">
+                                <img class="cursor-pointer-- hover-img-glow--" 
+                                     src="../icon/call.png" 
+                                     title="Call: (+212) 665-828-974" 
+                                     alt="Phone Icon" style="width: 40px;"/>
+                            </a>
+                        </li>
+                        
+                        <!-- Email -->
+                        <li class="m-2">
+                            <a href="mailto:Khalil4Store@gmail.com">
+                                <img class="cursor-pointer-- hover-img-glow--" 
+                                     src="../icon/email.png" 
+                                     title="Email: Khalil4Store@gmail.com" 
+                                     alt="Email Icon" style="width: 40px;"/>
+                            </a>
+                        </li>
+                        
+                        <!-- Google Maps -->
+                        <li class="m-2">
+                            <a href="https://www.google.com/maps?q=Temara+Morocco" target="_blank" rel="noopener noreferrer">
+                                <img class="cursor-pointer-- hover-img-glow--" 
+                                     src="../icon/loc.png" 
+                                     title="Location: Témara, Morocco" 
+                                     alt="Location Icon" style="width: 30px;"/>
+                            </a>
+                        </li>
+                    </ul>                            
+                </div>                        
+            </div>
+
+
+
             <div class="copyright">
                 <div class="container">
                     <p>© 2025 All Rights Reserved. Design With &lt;3 By<a href="https://github.com/sofiane-benhamza/"> 0x626</a></p>
@@ -448,7 +588,7 @@
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                             <div class="brand_box">
                                 <img src="../images/sell/${i}.jpg" class="w-75 img-fluid" alt="img" />
-                                <div class="d-flex flex-row align-items-center text-left pl-2">
+                                <div class="d-flex flex-row align-items-center text-left pl-2 ml-2">
                                     <img src="../images/brand/${brand}.png" style="width: 40px; height: auto; border-radius: 10px; margin-right: 0px;" alt="${brand}">
                                     <div class="d-flex flex-column mt-2 align-items-center">
                                         <div>
@@ -476,11 +616,11 @@
                 const count = (() => {
                     switch (brand.toLowerCase()) {
                         case 'samsung':
-                            return 5;
+                            return 6;
                         case 'xiaomi':
-                            return 4;
+                            return 5;
                         default:
-                            return 3; // Default for unknown brands
+                            return 4; // Default for unknown brands
                     }
                 })();
             
@@ -496,6 +636,14 @@
 
             loadPhones()
             $("#load-phones--").on("click",loadPhones);
+            
+            const $menu = $(".navbar-sm--.navbar-sm--css--");
+            const $body= $("body");
+            $(".menu-toggler--").on("click", function(){
+                $menu.toggleClass("navbar-toggled--");
+                $body.toggleClass("unscrollable--");
+            });
+
 
         });
 

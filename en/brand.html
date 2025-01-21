@@ -23,6 +23,8 @@
     <link rel="icon" href="../images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+    <!-- bootstrap icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/../css/font-awesome.css">
     <!-- owl stylesheets -->
@@ -37,19 +39,23 @@
 <!-- body -->
 
 <body class="main-layout">
+
+
+
+
     <!-- loader  -->
     <div class="loader_bg">
         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
     </div>
+
     <!-- end loader -->
     <!-- header -->
     <header>
         <!-- header inner -->
         <div class="header">
-
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                    <div class="col-3 logo_section">
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
@@ -58,46 +64,66 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-9">
-                        <div class="menu-area">
-                            <div class="limit-box">
-                                <nav class="main-menu">
-                                    <ul class="menu-area-main d-flex flex-row">
-                                        <li class="active"> <a href="index.html">Home</a> </li>
-                                        <li> <a href="about.html">About</a> </li>
-                                        <li><a href="brand.html">Brand</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li class="last d-flex align-items-center">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='?lang=en'">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='?lang=fr'">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='?lang=ar'">
+                    <div class="col-9 d-flex justify-content-end align-items-center">
+                        <div class="menu-areaw">
+                            <section class="limit-boxw">
+                                <div class="main-menus navbar--">
+                                    <ul class="menu-area-mainw d-flex flex-row">
+                                        <li class="active"> <a class="hover-underline-light--" href="index.html">Home</a> </li>
+                                        <li> <a class="hover-underline-light--" href="about.html">About</a> </li>
+                                        <li><a class="hover-underline-light--" href="brand.html">Brand</a></li>
+                                        <li><a class="hover-underline-light--" href="contact.html">Contact&nbsp;Us</a></li>
+                                        <li class="d-flex align-items-center">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../en/'">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../fr/'">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../ar/'">
                                         </li>                                                                                
                                     </ul>
-                                </nav>
-                            </div>
+                                </div>
+                            </section>
                         </div>
-                    </div>
-                    <div class="col-md-7 offset-md-7">
-                        <div class="location_icon_bottum">
-                            <ul>
-                                <li><img src="../icon/call.png" />(+212) 665-828-974</li>
-                                <li><img src="../icon/email.png" />Khalil4Store@gmail.com</li>
-                                <li><img src="../icon/loc.png" />Temara</li>
-                            </ul>
+                        <div class="menu-toggler--">
+                            <img class="navbar-sm-- cursor-pointer--" src="../images/menu.png" alt="Menu" style="width: 40px; height: auto;" />
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- end header inner -->
     </header>
+
+
+    <div class="navbar-sm-- bg-light navbar-sm--css-- d-flex flex-column align-items-center py-4 shadow" style="position: absolute; top: 0px; width: 100vw; height: 100vh; overflow: hidden;">
+        <div class="text-right w-75 mb-5 mt-4 menu-toggler--">
+            <img class="navbar-sm-- cursor-pointer--" src="../images/close-btn.png" alt="Menu" style="width: 40px; height: auto;" />
+        </div>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-house mr-3"></i> Home
+        </p>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-info-circle mr-3"></i> About
+        </p>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-tag mr-3"></i> Brand
+        </p>
+        <p class="btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-envelope mr-3"></i> Contact Us
+        </p>
+        <div class="mt-auto ml-auto p-2 pr-4 mb-5">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../en/'">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../fr/'">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../ar/'">
+        </div>
+    </div>
     <!-- end header -->
     <div class="brand_color">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
+            <div class="row m-0">
+                <div class="col-md-12 m-0 p-2">
+                    <div class="titlepage p-2 my-4">
                         <h2>Our Brand</h2>
+                        <h4 class="mt-1">Discover a world of extraordinary phone brands, crafted just for you.</h4>
                     </div>
                 </div>
             </div>
@@ -111,76 +137,10 @@
         </div>
         <div class="brand-bg">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="../images/1.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="../images/2.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="../images/3.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="brand_box">
-                            <img src="../images/4.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="../images/5.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="../images/6.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read-more">See More</a>
-                    </div>
+                <div class="row"></div>
+                
+                <div class="col-md-12">
+                    <button class="read-more" id="load-phones--">See More</button>
                 </div>
             </div>
         </div>
@@ -197,9 +157,9 @@
                         <div class="footer-box">
                             <div class="headinga">
                                 <h3>Address</h3>
-                                <span>Témara</span>
-                                <p>(+212) 665-828-974
-                                    <br>Khalil4Store@gmail.com</p>
+                               <span><i class="hover-underline-light-- pb-1" >Témara</i></span>
+                                <p><i class="hover-underline-light-- pb-1 mt-3" >(+212) 665-828-974</i></p>
+                                <p><i class="hover-underline-light-- pb-1 mt-3">Khalil4Store@gmail.com</i></p>
                             </div>
                             <ul class="location_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -209,18 +169,55 @@
                             </ul>
                             <div class="menu-bottom">
                                 <ul class="link">
-                                    <li> <a href="#">Home</a></li>
-                                    <li> <a href="#">About</a></li>
+                                    <li> <a href="./">Home</a></li>
+                                    <li> <a href="./about.html">About</a></li>
                                     
-                                    <li> <a href="#">Brand </a></li>
-                                    <li> <a href="#">Specials  </a></li>
-                                    <li> <a href="#"> Contact us</a></li>
+                                    <li> <a href="./brand.html">Brand</a></li>
+                                    
+                                    <li> <a href="./contact.html">Contact&nbsp;Us</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-2 offset-md-10" style="height: 50px;">
+                <div class="d-flex justify-content-end align-items-center">
+                    <ul class="d-flex flex-row flex-nowrap p-3">
+                        <!-- Phone Call -->
+                        <li class="m-2">
+                            <a href="tel:+212665828974">
+                                <img class="cursor-pointer-- hover-img-glow--" 
+                                     src="../icon/call.png" 
+                                     title="Call: (+212) 665-828-974" 
+                                     alt="Phone Icon" style="width: 40px;"/>
+                            </a>
+                        </li>
+                        
+                        <!-- Email -->
+                        <li class="m-2">
+                            <a href="mailto:Khalil4Store@gmail.com">
+                                <img class="cursor-pointer-- hover-img-glow--" 
+                                     src="../icon/email.png" 
+                                     title="Email: Khalil4Store@gmail.com" 
+                                     alt="Email Icon" style="width: 40px;"/>
+                            </a>
+                        </li>
+                        
+                        <!-- Google Maps -->
+                        <li class="m-2">
+                            <a href="https://www.google.com/maps?q=Temara+Morocco" target="_blank" rel="noopener noreferrer">
+                                <img class="cursor-pointer-- hover-img-glow--" 
+                                     src="../icon/loc.png" 
+                                     title="Location: Témara, Morocco" 
+                                     alt="Location Icon" style="width: 30px;"/>
+                            </a>
+                        </li>
+                    </ul>                            
+                </div>                        
+            </div>
+
             <div class="copyright">
                 <div class="container">
                     <p>© 2025 All Rights Reserved. Design With &lt;3 By<a href="https://github.com/sofiane-benhamza/"> 0x626</a></p>
@@ -255,6 +252,84 @@
 
                 $(this).removeClass('transition');
             });
+
+            const $menu = $(".navbar-sm--.navbar-sm--css--");
+            const $body= $("body");
+            $(".menu-toggler--").on("click", function(){
+                $menu.toggleClass("navbar-toggled--");
+                $body.toggleClass("unscrollable--");
+            });
+
+
+            const $container = $('.brand-bg .container .row');
+            
+            const brandMap = new Map([
+                [1, 'honor'], [20, 'honor'], [23, 'honor'],
+                [2, 'samsung'], [4, 'samsung'], [5, 'samsung'], [6, 'samsung'], [7, 'samsung'], 
+                [10, 'samsung'], [11, 'samsung'], [22, 'samsung'], [24, 'samsung'], [25, 'samsung'], [30, 'samsung'],
+                [8, 'xiaomi'], [9, 'xiaomi'],[3, 'xiaomi'], [12, 'xiaomi'], [13, 'xiaomi'], [14, 'xiaomi'], 
+                [15, 'xiaomi'], [16, 'xiaomi'], [17, 'xiaomi'], [18, 'xiaomi'], [21, 'xiaomi'], [29, 'xiaomi'],
+                [19, 'oppo'], [26, 'oppo'], [27, 'oppo'], [28, 'oppo'],
+            ]);
+
+            var index = 1;
+
+            function loadPhones(){
+                for (let i = index; i <= index+5; i++) {
+                    const brand = brandMap.get(i) || 'other';
+                    const card = `
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+                            <div class="brand_box">
+                                <img src="../images/sell/${i}.jpg" class="w-75 img-fluid" alt="img" />
+                                <div class="d-flex flex-row align-items-center text-left pl-2 ml-2">
+                                    <img src="../images/brand/${brand}.png" style="width: 40px; height: auto; border-radius: 10px; margin-right: 0px;" alt="${brand}">
+                                    <div class="d-flex flex-column mt-2 align-items-center">
+                                        <div>
+                                            <h4 class="pl-2 py-0">${brand.toUpperCase()}</h4>
+                                        ${stars(brand)}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Append the card to the container
+                    $container.append(card);
+                }
+                index+=6;
+                if(index > 30){
+                    $("#load-phones--").attr('disabled','disabled').text("That's all for this month")
+                }
+            }
+
+            const star = '<i><img src="../images/star.png" alt="star" /></i>';
+            function stars(brand) {
+                // Determine the number of stars based on the brand
+                const count = (() => {
+                    switch (brand.toLowerCase()) {
+                        case 'samsung':
+                            return 6;
+                        case 'xiaomi':
+                            return 5;
+                        default:
+                            return 4; // Default for unknown brands
+                    }
+                })();
+            
+                let starsHtml = '';
+                for (let i = 0; i < count; i++) {
+                    starsHtml += star;
+                }
+            
+                return `
+                    ${starsHtml}
+                `;
+            }
+
+            loadPhones()
+            $("#load-phones--").on("click",loadPhones);
+
         });
     </script>
 </body>

@@ -454,7 +454,7 @@ background-position: center center;
      padding-top: 11px;
 }
 
-nav.main-menu {
+nav.main-menus {
      float: right;
      margin-left: 0;
 }
@@ -506,7 +506,7 @@ ul.top_icon li a {
      padding: 18px 0 0;
 }
 .last {padding-right: 0px;}
-.main-menu ul>li nth:child(7) a {
+.main-menus ul>li nth:child(7) a {
      padding-right: 0px;
 }
 
@@ -1049,39 +1049,39 @@ ul.top_icon li a {
      font-size: 12px;
 }
 
-.main-menu {
+.main-menus {
      text-align: center;
 }
 
-.main-menu ul {
+.main-menus ul {
      margin: 0;
      list-style-type: none;
      margin-bottom: 10px;
 }
 
-.main-menu ul>li {
+.main-menus ul>li {
      display: inline-block;
      position: relative;
 }
 
-.main-menu ul>li a {
+.main-menus ul>li a {
      line-height: 20px;
      font-size: 16px;
      display: block;
      font-weight: 500;
      color: #fff;
-     padding: 22px 30px;
+     padding: 22px 15px;
 }
 
 
 }
-.main-menu ul li:last-child a {
+.main-menus ul li:last-child a {
      padding-right: 0;
 }
 .sub-down li {
      background: #ffffff;
 }
-.main-menu ul>li .sub-down li a {
+.main-menus ul>li .sub-down li a {
      color: #114c7d;
      font-size: 15px;
      text-transform: capitalize;
@@ -1090,15 +1090,15 @@ ul.top_icon li a {
      position: relative;
      border-bottom: solid #eee 1px;
 }
-.main-menu ul>li .sub-down li a::before {}
-.main-menu ul>li .sub-down li a:hover {
+.main-menus ul>li .sub-down li a::before {}
+.main-menus ul>li .sub-down li a:hover {
      color: #111111;
 }
-.main-menu ul>li .sub-down li a:hover::before {}
-.main-menu ul li:first-child {
+.main-menus ul>li .sub-down li a:hover::before {}
+.main-menus ul li:first-child {
      margin-left: 0;
 }
-.main-menu ul>li>ul {
+.main-menus ul>li>ul {
      opacity: 0;
      position: absolute;
      text-align: left;
@@ -1116,18 +1116,18 @@ ul.top_icon li a {
      -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
      box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
-.main-menu>ul>li:hover>ul {
+.main-menus>ul>li:hover>ul {
      -webkit-transform: scaleY(1);
      transform: scaleY(1);
      visibility: visible;
      opacity: 1;
 }
-.main-menu ul>li>ul>li {
+.main-menus ul>li>ul>li {
      margin: 0px;
      position: relative;
      display: block;
 }
-.main-menu ul>li>ul>li:hover>ul {
+.main-menus ul>li>ul>li:hover>ul {
      -webkit-transform: scaleY(1);
      transform: scaleY(1);
      visibility: visible;
@@ -1135,7 +1135,7 @@ ul.top_icon li a {
      left: 100%;
      top: 10px;
 }
-.main-menu ul>li>ul>li>a {
+.main-menus ul>li>ul>li>a {
      background: none !important;
 }
 .mean-container .mean-nav {
@@ -1143,12 +1143,12 @@ ul.top_icon li a {
      position: absolute;
      top: 100%;
 }
-.main-menu ul>li {
+.main-menus ul>li {
      position: inherit;
      display: inline-block;
      vertical-align: middle;
 }
-.main-menu ul>li:nth-child (6) {
+.main-menus ul>li:nth-child (6) {
      padding-right: 0px;
 }
 .nav>li {
@@ -1575,7 +1575,8 @@ margin-bottom: -111px;
 z-index: 999;
 background: #E17F14;
 width: 100%;
-position: relative;}
+position: relative;
+}
 .location_icon_bottum::before {
      position: absolute;
 content: "";
@@ -1594,7 +1595,7 @@ color: #fff;
 font-size: 15px;
 font-weight: 500;
 }
-.location_icon_bottum ul li img {padding-right: 10px;}
+/* .location_icon_bottum ul li img {padding-right: 10px;} */
 
 /** banner **/
 
@@ -2175,4 +2176,88 @@ ul.location_icon span {
   }
 
 
-  
+  .cursor-pointer-- {
+     cursor: pointer;
+  }
+
+  .hover-underline-light-- {
+     position: relative;
+     text-decoration: none;
+     text-shadow: 0 0 2px black;
+   }
+
+   .hover-glow--:hover {
+     text-shadow: 0 0 5px white,0 0 1px black;
+   }
+
+   .hover-img-glow--:hover {
+     filter: drop-shadow(0 0 8px white);
+          transition: filter 0.3s ease;
+   }
+   
+   
+   .hover-underline-light--::after {
+     content: '';
+     position: absolute;
+     bottom: 0%;
+     left: 50%;
+     width: 0;
+     height: 3px;
+     transition: width 0.3s ease, left 0.3s ease;
+     transform: translateX(-50%);
+     background-color: #FFF; /* Set the underline color */
+   }
+   
+   .hover-underline-light--:hover::after {
+     width: 90%;
+     left: 50%;
+   }
+
+   .navbar-sm--css-- {
+     transition: all 0.3s ease;
+     height:100vh ;
+     z-index: 9;
+     right: 100vw;
+     backdrop-filter: blur(8px);
+   }
+   
+   .navbar-toggled-- {
+     right: 0;
+   }
+   .unscrollable-- {
+     overflow-y: hidden !important;
+   }
+   
+
+   @media (max-width: 768px) {
+     div.navbar-- {
+          display: none;
+     }
+   }
+
+   @media (min-width: 769px) {
+     .navbar-sm-- {
+          display: none;
+     }
+   }
+   
+   .btn-orange {
+     background-color: #ee580f;
+     color: #fff; /* White text for contrast */
+     border: none; /* Remove border if needed */
+     padding: 0.5rem 1rem; /* Adjust padding as desired */
+     border-radius: 0.25rem; /* Rounded corners */
+     transition: background-color 0.3s ease, color 0.3s ease;
+   }
+   
+   .btn-orange:hover {
+     background-color: #d14f0e; /* Slightly darker shade for hover */
+     color: #fff; /* Keep text color white */
+   }
+   
+   .btn-orange:focus, .btn-orange:active {
+     outline: none;
+     box-shadow: 0 0 0 0.25rem rgba(238, 88, 15, 0.5); /* Focus ring effect */
+   }
+   
+   
