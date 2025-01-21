@@ -1843,7 +1843,7 @@ border-radius: 50px;
 /** brand **/
 .brand {
      padding-top: 60px;
-     border-top: #db0000 solid 6px;}
+}
 
 .brand-bg {
      background: #ebebeb;
@@ -1861,16 +1861,19 @@ border-radius: 50px;
      text-align: center;
      padding: 80px 0px 30px 0px ;
 }
-.brand-bg .brand_box > img {
+.brand-bg .brand_box > img, .for-sell-- {
     height: auto;
     width: auto;
-    border-radius: 10px;
     border: 1px solid black;
+    transition: all .3s ease;
 }
-.brand-bg .brand_box > img:hover{
+.brand-bg .brand_box > img:hover, .for-sell--:hover{
      filter: saturate(150%);
      cursor: pointer;
+     border-radius: 15px;
+
 } 
+
 
 .brand-bg .brand_box h3 {
 
@@ -2258,6 +2261,16 @@ ul.location_icon span {
    .btn-orange:focus, .btn-orange:active {
      outline: none;
      box-shadow: 0 0 0 0.25rem rgba(238, 88, 15, 0.5); /* Focus ring effect */
+   }
+
+   .img-slide-- {
+     height: 50px !important;
+   }
+
+   .product-card--:hover {
+     transform: translateY(-20px);
+     background-color: orange;
+     z-index: 99;
    }
    
    

@@ -90,7 +90,7 @@ $(function () {
 			margin: 10,
 			nav: true,
 			dots: false,
-			navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+			navText: ["<i class='bi bi-angle-left'></i>", "<i class='bi bi-angle-right'></i>"],
 			autoplay: true,
 			autoplayTimeout: 3000,
 			autoplayHoverPause: true
@@ -106,7 +106,7 @@ $(function () {
 			loop: true,
 			nav: true,
 			margin: 10,
-			navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+			navText: ["<i class='bi bi-angle-left'></i>", "<i class='bi bi-angle-right'></i>"],
 			responsive: {
 				0: {
 					items: 1
