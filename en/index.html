@@ -450,27 +450,12 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Contact us</h2>
+                        <h2>Visit Us Soon</h2>
                     </div>
-                    <form class="main_form">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Your name" type="text" name="Your Name">
+                    <div class=" col-md-12">
+                                <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=33.92433165513684,%20-6.891641121724302+(Khalil%20Phone%20Store)&amp;t=h&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe></div>
+                                <button class="send" onclick="window.location.href='./contact.html'">Go TO CONTACT PAGE</button>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Email" type="text" name="Email">
-                            </div>
-                            <div class=" col-md-12">
-                                <input class="form-control" placeholder="Phone" type="text" name="Phone">
-                            </div>
-                            <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Message"></textarea>
-                            </div>
-                            <div class=" col-md-12">
-                                <button class="send">Send</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -560,63 +545,6 @@
                 [19, 'oppo'], [26, 'oppo'], [27, 'oppo'], [28, 'oppo'],
             ]);
 
-            var index = 1;
-
-            function loadPhones(){
-                for (let i = index; i <= index+5; i++) {
-                    const brand = brandMap.get(i) || 'other';
-                    const card = `
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                            <div class="brand_box">
-                                <img src="../images/sell/${i}.jpg" class="w-75 img-fluid" alt="img" />
-                                <div class="d-flex flex-row align-items-center text-left pl-2 ml-2">
-                                    <img src="../images/brand/${brand}.png" style="width: 40px; height: auto; border-radius: 10px; margin-right: 0px;" alt="${brand}">
-                                    <div class="d-flex flex-column mt-2 align-items-center">
-                                        <div>
-                                            <h4 class="pl-2 py-0">${brand.toUpperCase()}</h4>
-                                        ${stars(brand)}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    
-                    // Append the card to the container
-                    $container.append(card);
-                }
-                index+=6;
-                if(index > 30){
-                    $("#load-phones--").attr('disabled','disabled').text("That's all for this month")
-                }
-            }
-
-            const star = '<i><img src="../images/star.png" alt="star" /></i>';
-            function stars(brand) {
-                // Determine the number of stars based on the brand
-                const count = (() => {
-                    switch (brand.toLowerCase()) {
-                        case 'samsung':
-                            return 6;
-                        case 'xiaomi':
-                            return 5;
-                        default:
-                            return 4; // Default for unknown brands
-                    }
-                })();
-            
-                let starsHtml = '';
-                for (let i = 0; i < count; i++) {
-                    starsHtml += star;
-                }
-            
-                return `
-                    ${starsHtml}
-                `;
-            }
-
-            loadPhones()
-            $("#load-phones--").on("click",loadPhones);
             
             const $menu = $(".navbar-sm--.navbar-sm--css--");
             const $body= $("body");
@@ -628,20 +556,47 @@
 
         });
 
-        $(function () {
-  $('.slider').slick({
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 10000,
-    arrows: false,
-    swipe: false,
-    slidesToShow: 4,
-    cssEase: 'linear',
-    pauseOnFocus: false,
-    pauseOnHover: false,
-  });
-});
+        let numColumns = 5;
+        function updateColumns() {
+            const screenWidth = $(window).width(); // Use jQuery to get the screen width
+        
+            if (screenWidth >= 1024) { // Desktop (large screen, like computer)
+                numColumns = 5;
+            } else if (screenWidth >= 768) { // Tablet (between 768px and 1023px)
+                numColumns = 3;
+            } else { // Phone (screen smaller than 768px)
+                numColumns = 1;
+            }
 
+            return numColumns;
+        
+        }
+
+        updateColumns();
+
+
+        $(function () {
+          function initializeSlick() {
+            $('.slider').slick({
+              autoplay: true,
+              autoplaySpeed: 0,
+              speed: 10000,
+              arrows: false,
+              swipe: false,
+              slidesToShow: updateColumns(),
+              cssEase: 'linear',
+              pauseOnFocus: false,
+              pauseOnHover: false,
+            });
+          }
+      
+          initializeSlick();
+      
+          $(window).on('resize', function () {
+            $('.slider').slick('unslick');  // Destroy the current slick instance
+            initializeSlick();  // Reinitialize slick with updated settings
+          });
+        });
 
     </script>
 

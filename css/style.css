@@ -2269,8 +2269,11 @@ ul.location_icon span {
 
    .product-card--:hover {
      transform: translateY(-20px);
-     background-color: orange;
+     background-color: rgb(234, 220, 94);
      z-index: 99;
    }
    
-   
+   button:disabled {
+     cursor: not-allowed;  /* Changes cursor to prohibited (not-allowed) */
+     opacity: 0.6;          /* Optional: adds a slight transparency to show the button is disabled */
+ }

@@ -138,19 +138,31 @@
                     <form class="main_form">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Your name" type="text" name="Your Name">
+                                <input class="form-control" placeholder="Your name" type="text" name="Your Name" id="mail-name--">
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Email" type="text" name="Email">
+                                <input class="form-control" placeholder="Email" type="text" name="Email" id="mail-mail--">
                             </div>
                             <div class=" col-md-12">
-                                <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                                <input class="form-control" placeholder="Phone" type="text" name="Phone" id="mail-phone--">
                             </div>
                             <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Message"></textarea>
+                                <textarea class="textarea" placeholder="Message" id="mail-msg--"></textarea>
                             </div>
-                            <div class=" col-md-12">
-                                <button class="send">Send</button>
+                            <div class="col-md-12">
+                                <p class="d-flex flex-row justify-content-left align-items-center alert alert-info border border-info">
+                                    <i class="bi bi-info-circle px-3"></i>
+                                    Kindly provide your email address and phone number, and one of our representatives will reach out to you shortly.                              
+                                </p>
+
+                                <p class="d-flex flex-row justify-content-left align-items-center alert alert-danger border border-danger" style="opacity: 0;" id="form-danger--" style="display: none;">
+                                    <i class="bi bi-x-circle px-3"></i>
+                                    Invalid form.
+                                </p>
+                                
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button type="button" class="btn btn-orange  p-2 m-2 " id="send-btn--" disabled>Send a message</button>
                             </div>
                         </div>
                     </form>
@@ -215,13 +227,17 @@
     <!-- javascript -->
     <script src="../js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
     <script>
+
+
         $(document).ready(function() {
             $(".fancybox").fancybox({
                 openEffect: "none",
                 closeEffect: "none"
             });
-
             $(".zoom").hover(function() {
 
                 $(this).addClass('transition');
@@ -236,7 +252,86 @@
                 $menu.toggleClass("navbar-toggled--");
                 $body.toggleClass("unscrollable--");
             });
-        });
+
+            $form_danger = $("#form-danger--");
+
+            function validateForm() {
+        var name = $('#mail-name--').val().trim();
+        var email = $('#mail-mail--').val().trim();
+        var phone = $('#mail-phone--').val().trim();
+        var message = $('#mail-msg--').val().trim();
+
+        // Email regex for validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Check if all fields are valid
+        if (name !== "" && email !== "" && emailRegex.test(email) && phone !== "" && message.length > 10) {
+            $('#send-btn--').prop('disabled', false);  // Enable the button
+            $form_danger.animate({
+    opacity: 0
+}, 'fast'); // Fade out the danger message
+        } else {
+            $('#send-btn--').prop('disabled', true);   // Keep the button disabled
+            $form_danger.animate({
+    opacity: 1
+}, 'fast');        
+        }
+
+    }
+
+    // Trigger the validation function on input change for all relevant fields
+    $('#mail-name--, #mail-mail--, #mail-phone--, #mail-msg--').on('change keyup', function() {
+        validateForm();
+    });
+
+    const _atob = (str) => {
+            if(str)
+                return atob(atob(str.trim())).trim();
+            console.warn("yes of course!")
+        }
+
+
+    $('#send-btn--').on('click', function() {
+    try {
+        // emailjs.init({_atob("YzJWeWRtbGpaVjlrZG5GMU16Qno=")});
+        // emailjs.init({publicKey: "4hrLH-s4dfWrWePAkFTwE"});
+        emailjs.init({publicKey: _atob("WkRKVVVFVnBaR1ZLT1d0emVUTlJjVXc9")});
+
+    } catch (error) {
+        console.error('Error decoding emailjs user ID:', error);
+    }
+
+    // Get form values
+    var from_name = $("#mail-name--").val();
+    var from_phone = $("#mail-phone--").val();
+    var from_email = $("#mail-mail--").val();
+    var html_message = $("#mail-msg--").val();
+
+    // Validate the inputs
+    if (!from_name || !from_phone || !from_email || !html_message) {
+        return; 
+    }
+
+    // Template parameters for emailjs
+    var templateParams = {
+        from_name: from_name,
+        from_phone: from_phone,
+        from_email: from_email,
+        html_message: html_message
+    };
+
+    // Send the email using emailjs
+    emailjs.send('service_dvqu30s', 'template_uyjh6yd', templateParams)
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        $('#send-btn--').text("Message sent successfully").prop('disabled', true);   // Keep the button disabled
+    }, function(error) {
+        console.log('FAILED...', error);
+    });
+});
+});
+
+
     </script>
 </body>
 
