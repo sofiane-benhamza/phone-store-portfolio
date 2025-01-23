@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>pomato</title>
+    <title>Khalil Phone Store</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -23,6 +23,8 @@
     <link rel="icon" href="../images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+    <!-- bootstrap icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/../css/font-awesome.css">
     <!-- owl stylesheets -->
@@ -37,66 +39,91 @@
 <!-- body -->
 
 <body class="main-layout">
+
+
+
+
     <!-- loader  -->
     <div class="loader_bg">
         <div class="loader"><img src="../images/loading.gif" alt="#" /></div>
     </div>
+
     <!-- end loader -->
     <!-- header -->
     <header>
         <!-- header inner -->
         <div class="header">
-
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                    <div class="col-3 logo_section">
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="../images/logo.png" alt="#"></a>
+                                    <a href="index.html"><img src="../images/logo.png" style="border-radius: 10px;" alt="#"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                        <div class="menu-area">
-                            <div class="limit-box">
-                                <nav class="main-menu">
-                                    <ul class="menu-area-main">
-                                        <li class="active"> <a href="index.html">Home</a> </li>
-                                        <li> <a href="about.html">About</a> </li>
-                                        <li><a href="brand.html">Brand</a></li>
-                                        <li><a href="special.html">Specials</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li class="last">
-                                            <a href="#"><img src="../images/search_icon.png" alt="icon" /></a>
-                                        </li>
+                    <div class="col-9 d-flex justify-content-end align-items-center">
+                        <div class="menu-areaw">
+                            <section class="limit-boxw">
+                                <div class="main-menus navbar--">
+                                    <ul class="menu-area-mainw d-flex flex-row">
+                                        <li class="active"> <a class="hover-underline-light--" href="index.html">Accueil</a> </li>
+                                        <li> <a class="hover-underline-light--" href="about.html">À&nbsp;propos</a> </li>
+                                        <li><a class="hover-underline-light--" href="brand.html">Marque</a></li>
+                                        <li><a class="hover-underline-light--" href="contact.html">Contactez-nous</a></li>
+                                        <li class="d-flex align-items-center">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../en/'">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../fr/'">
+                                            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../ar/'">
+                                        </li>                                                                                
                                     </ul>
-                                </nav>
-                            </div>
+                                </div>
+                            </section>
                         </div>
-                    </div>
-                    <div class="col-md-6 offset-md-6">
-                        <div class="location_icon_bottum">
-                            <ul>
-                                <li><img src="../icon/call.png" />(+71)9876543109</li>
-                                <li><img src="../icon/email.png" />demo@gmail.com</li>
-                                <li><img src="../icon/loc.png" />Location</li>
-                            </ul>
+                        <div class="menu-toggler--">
+                            <img class="navbar-sm-- cursor-pointer--" src="../images/menu.png" alt="Menu" style="width: 40px; height: auto;" />
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- end header inner -->
     </header>
+
+    <div class="navbar-sm-- bg-light navbar-sm--css-- d-flex flex-column align-items-center py-4 shadow" style="position: absolute; top: 0px; width: 100vw; height: 100vh; overflow: hidden;">
+        <div class="text-right w-75 mb-5 mt-4 menu-toggler--">
+            <img class="navbar-sm-- cursor-pointer--" src="../images/close-btn.png" alt="Menu" style="width: 40px; height: auto;" />
+        </div>
+        <a href="./" class="text-dark btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-house mr-3"></i> Accueil
+        </a>
+        <a href="./about.html" class="text-dark btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-info-circle mr-3"></i> À propos
+        </a>
+        <a href="./brand.html" class="text-dark btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-tag mr-3"></i> Marque
+        </a>
+        <a href="./contact.html" class="text-dark btn btn-light rounded-pill my-2 px-4 py-2 w-75 d-flex align-items-center justify-content-center">
+            <i class="bi bi-envelope mr-3"></i>Contactez-nous
+        </a>
+        <div class="mt-auto ml-auto p-2 pr-4 mb-5">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="UK Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../en/'">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1024px-Flag_of_France.svg.png" alt="France Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../fr/'">
+            <img class="hover-img-glow--" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1024px-Flag_of_Morocco.svg.png" alt="Morocco Flag" style="width: 40px; height: 30px; cursor: pointer;margin: 10px;" onclick="window.location.href='../ar/'">
+        </div>
+    </div>
     <!-- end header -->
+
     <div class="brand_color">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Our Brand</h2>
+            <div class="row m-0">
+                <div class="col-md-12 m-0 p-2">
+                    <div class="titlepage p-2 my-4">
+                        <h2>Notre marque</h2>
+                        <h4 class="mt-1">Découvrez un monde de marques de téléphones extraordinaires, conçues spécialement pour vous.</h4>
                     </div>
                 </div>
             </div>
@@ -104,84 +131,15 @@
     </div>
 
     <!-- brand -->
-    <div class="brand">
+    <div class="brand mb-5" >
         <div class="container">
-
-        </div>
-        <div class="brand-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="../images/1.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="../images/2.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="../images/3.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="brand_box">
-                            <img src="../images/4.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="../images/5.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="../images/6.png" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                            <i><img src="../images/star.png"/></i>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read-more">See More</a>
-                    </div>
+                <div class="row" id="store--">
+                    
                 </div>
-            </div>
+
+                <div class="col-md-12">
+                    <button class="read-more" id="load-phones--">Voir plus</button>
+                </div>
         </div>
     </div>
 
@@ -195,34 +153,36 @@
                     <div class="col-md-12 ">
                         <div class="footer-box">
                             <div class="headinga">
-                                <h3>Address</h3>
-                                <span>Healing Center, 176 W Streetname,New York, NY 10014, US</span>
-                                <p>(+71) 8522369417
-                                    <br>demo@gmail.com</p>
+                                <h3>Adresse</h3>
+                               <span><i class="hover-underline-light-- pb-1" >Témara</i></span>
+                                <p><i class="hover-underline-light-- pb-1 mt-3" >(+212) 665-828-974</i></p>
+                                <p><i class="hover-underline-light-- pb-1 mt-3">Khalil4Store@gmail.com</i></p>
                             </div>
                             <ul class="location_icon">
-                                <li> <a href="#"><i class="bi bi-facebook"></i></a></li>
-                                <li> <a href="#"><i class="bi bi-twitter"></i></a></li>
-                                <li> <a href="#"><i class="bi bi-instagram"></i></a></li>
-
+                                <li> <a target="_blank" href="https://wa.link/xay8s4" class="d-flex justify-content-center align-items-center p-3 bi bi-whatsapp"></a></li>
+                                <li> <a target="_blank" href="#" class="d-flex justify-content-center align-items-center p-3 bi bi-facebook"></a></li>
+                                <li> <a target="_blank" href="#" class="d-flex justify-content-center align-items-center p-3 bi bi-instagram"></a></li>
                             </ul>
                             <div class="menu-bottom">
                                 <ul class="link">
-                                    <li> <a href="./">Home</a></li>
-                                    <li> <a href="./about.html">About</a></li>
+                                    <li> <a href="./">Accueil</a></li>
+                                    <li> <a href="./about.html">À propos</a></li>
                                     
-                                    <li> <a href="./brand.html">Brand</a></li>
+                                    <li> <a href="./brand.html">Marque</a></li>
                                     
-                                    <li> <a href="./contact.html">Contact&nbsp;Us</a></li>
+                                    <li> <a href="./contact.html">Contactez-nous</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            
+
             <div class="copyright">
                 <div class="container">
-                    <p>© 2019 All Rights Reserved. Design By<a href="https://html.design/"> Free Html Templates</a></p>
+                    <p>© 2025 Tous droits réservés. Conception avec &lt;3 par<a href="https://github.com/sofiane-benhamza/"> 0x626</a></p>
                 </div>
             </div>
         </div>
@@ -254,6 +214,96 @@
 
                 $(this).removeClass('transition');
             });
+
+            const $menu = $(".navbar-sm--.navbar-sm--css--");
+            const $body= $("body");
+            $(".menu-toggler--").on("click", function(){
+                $menu.toggleClass("navbar-toggled--");
+                $body.toggleClass("unscrollable--");
+            });
+
+
+            const $container = $('#store--');
+            
+            const brandMap = new Map([
+                [1, 'honor'], [20, 'honor'], [23, 'honor'],
+                [2, 'samsung'], [4, 'samsung'], [5, 'samsung'], [6, 'samsung'], [7, 'samsung'], 
+                [10, 'samsung'], [11, 'samsung'], [22, 'samsung'], [24, 'samsung'], [25, 'samsung'], [30, 'samsung'],
+                [8, 'xiaomi'], [9, 'xiaomi'],[3, 'xiaomi'], [12, 'xiaomi'], [13, 'xiaomi'], [14, 'xiaomi'], 
+                [15, 'xiaomi'], [16, 'xiaomi'], [17, 'xiaomi'], [18, 'xiaomi'], [21, 'xiaomi'], [29, 'xiaomi'],
+                [19, 'oppo'], [26, 'oppo'], [27, 'oppo'], [28, 'oppo'],
+                [31, 'apple'], [32, 'apple'], [33, 'apple'], [34, 'apple'], [35, 'apple'], [36, 'apple'], [37, 'apple'], 
+                [38, 'apple'], [39, 'apple'], [40, 'apple'], [41, 'apple'], [42, 'apple'], [43, 'apple'], [44, 'apple'], 
+                [45, 'apple'], [46, 'apple'], [47, 'apple'], [48, 'apple'], [49, 'apple'], [50, 'apple'], [51, 'apple'], 
+                [52, 'apple'], [53, 'apple']
+            ]);
+
+            var index = 1;
+            const NUMBER_OF_IMAGES = 53;
+            var STEP = 8;
+
+            function loadPhones(type){
+                if(type == 'all')
+                    STEP = NUMBER_OF_IMAGES
+                for (let i = index; i <= index+STEP-1; i++) {
+                    const brand = brandMap.get(i) || 'autre';
+
+                    const card = `
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 rounded mb-4 bg-light">
+                            <div class="border border-dark rounded p-2 product-card-- shadow">
+                                <img src="../images/sell/${i}.jpg" class="img-fluid for-sell--" alt="${brand} product image" />
+                                <br />
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column justify-content-center align-items-center col-5 mt-1">
+                                        <img src="../images/brand/${brand}.png" class="my-1 rounded-circle shadow" style="width: 50px; height: 50px; object-fit: cover;" alt="${brand}">
+                                        <h5 class="font-weight-bold text-dark mt-1">${brand.toUpperCase()}</h5>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-end text-right col-7">
+                                        <p class="mb-0 text-nowrap text-warning">${stars(brand)}</p>
+                                        <a target="_blank" href="https://wa.link/xay8s4" class="mt-3 mb-2 px-1 border border-dark btn btn-light">Acheter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                        if(i <= NUMBER_OF_IMAGES){
+                            $container.append(card);
+                        }
+                }
+                index+=STEP;
+                if(index > NUMBER_OF_IMAGES){
+                    $("#load-phones--").attr('disabled','disabled').text("That's all for this month")
+                }
+            }
+
+            const star = '<i><img src="../images/star.png" alt="star" /></i>';
+            function stars(brand) {
+                // Determine the number of stars based on the brand
+                const count = (() => {
+                    switch (brand.toLowerCase()) {
+                        case 'apple':
+                            return 5;
+                        case 'samsung':
+                            return 5;
+                        case 'xiaomi':
+                            return 4;
+                        default:
+                            return 4; // Default for unknown brands
+                    }
+                })();
+            
+                let starsHtml = '';
+                for (let i = 0; i < count; i++) {
+                    starsHtml += star;
+                }
+            
+                return `
+                    ${starsHtml}
+                `;
+            }
+
+            loadPhones()
+            $("#load-phones--").on("click",loadPhones);
+
         });
     </script>
 </body>
