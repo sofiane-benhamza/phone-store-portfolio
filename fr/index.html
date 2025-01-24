@@ -20,7 +20,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="../css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="../images/logo.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
     <!-- bootstrap icons -->
@@ -459,11 +459,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Visit Us Soon</h2>
+                        <h2>Visitez-nous bientôt</h2>
                     </div>
                     <div class=" col-md-12">
                                 <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=33.92433165513684,%20-6.891641121724302+(Khalil%20Phone%20Store)&amp;t=h&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe></div>
-                                <button class="send" onclick="window.location.href='./contact.html'">Go TO CONTACT PAGE</button>
+                                <button class="send" onclick="window.location.href='./contact.html'">Aller à la page de contact</button>
                             </div>
                 </div>
             </div>
@@ -605,6 +605,9 @@
             $('.slider').slick('unslick');  // Destroy the current slick instance
             initializeSlick();  // Reinitialize slick with updated settings
           });
+          setTimeout(()=>{
+              $("#map-container--").html(`<iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=33.92433165513684,%20-6.891641121724302+(Khalil%20Phone%20Store)&amp;t=h&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe>`);
+            }, 5000)
         });
 
     </script>
